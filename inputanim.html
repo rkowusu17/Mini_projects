@@ -1,61 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Input-anim.web</title> 
-    <style> 
-    body{ 
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nice-input.web</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        padding: 20px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
 
-    form{ 
+      form {
         margin: 30px auto;
         display: flex;
-        gap: 20px; 
-    } 
-    .input-box{
-        max-width: 350px;
-        width: 90%; 
+        gap: 40px;
+        max-width: 300px;
+        width: 100%;
+      }
+      fieldset {
+        width: 100%;
+        max-height: 200px;
+        height: 90%;
+        text-align: center;
+        border: 1px solid transparent;
+        border-top: 1px solid black;
+        border-radius: 5px;
+        box-shadow: 5px 2px 3px #333;
+      }
+
+      .input-group {
+        width: 90%;
         position: relative;
-    }    
-    input {
-        width: 80%; 
-        padding: 10px 15px;
-    }
+        --x: 15px;
+        --y: 10px;
+        margin: 20px auto;
+      }
 
-    label{
-        position: absolute; 
-        top: 10px; 
-        left: 40px;
-        border: 1px solid transparent; 
-        transition: 350ms;
+      input {
+        border: 1px solid black;
+        border-radius: 15px;
+        width: 100%;
+        padding: var(--y) var(--x);
+      }
+      button {
+        padding: 8px;
+        border: transparent;
+        border-radius: 5px;
+        background-color: lightgreen;
+      }
 
-    }  
+      label {
+        position: absolute;
+        top: calc(var(--y) - 4px);
+        left: calc(var(--x) + 3px);
+        border: 1px solid transparent;
 
-    input:focus ~label, input:not(:placeholder-shown) ~ label{
-        top: -15px; 
-        left: 15px;
-        color: green;
-        border: 1px solid black; 
+        padding: 0 6px;
         background-color: white;
-    } 
-
-
-
+        transition: 300ms;
+      }
+      input:focus ~ label,
+      input:not(:placeholder-shown) ~ label {
+        top: calc(var(--y) * -1);
+        font-size: 14px;
+        color: green;
+        border-color: black;
+        border-radius: 10px;
+      }
     </style>
-</head>
-<body> 
+  </head>
+  <body>
     <form>
-        <div class="input-box"> 
-            <input type="text" id="username" placeholder=""/>
-            <label for="username">Username</label>
-        </div> 
+      <fieldset>
+        <legend>Login</legend>
+        <div class="input-group">
+          <input id="username" placeholder="" />
+          <label for="username">Username</label>
+        </div>
 
-        <div class="input-box"> 
-            <input type="password" id="password" placeholder=""/>
-            <label for="password">Password</label>
-        </div> 
-    </form>    
-</body>
+        <div class="input-group">
+          <input type="password" id="password" placeholder="" />
+          <label for="password">password</label>
+        </div>
+        <button value="Submit">Submit</button>
+      </fieldset>
+    </form>
+  </body>
 </html>
