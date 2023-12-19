@@ -38,6 +38,15 @@ h2 {
   margin: 10px auto; */
 }
 
+.buttons {
+  max-width: 450px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
 button {
   border: none;
   border-radius: 5px;
@@ -54,6 +63,10 @@ button {
 
 #increment-btn {
   background-color: darkred;
+}
+
+#deduct-btn {
+  background-color: #333;
 }
 
 #save-btn {

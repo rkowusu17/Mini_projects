@@ -20,6 +20,11 @@ function restart() {
   // saveEl.textContent =
 }
 
+function deduct() {
+  countEl.textContent = count - 1;
+  count = count - 1;
+}
+
 let welcomeEl = document.getElementById("welcome-el");
 let username = "reggie";
 let greeting = " Welcome back Agent";
