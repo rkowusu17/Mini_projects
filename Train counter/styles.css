@@ -11,8 +11,10 @@ body {
   font-weight: bold;
   text-align: center;
   padding: 32px;
+  display: flex;
+  flex-flow: column wrap;
+  min-height: 100vh;
 }
-
 main {
   margin: 20px auto;
   border: 2px solid grey;
@@ -20,6 +22,7 @@ main {
   background-image: radial-gradient(whitesmoke, rgba(255, 102, 0, 0.712));
   display: flex;
   flex-flow: column wrap;
+  flex-grow: 1;
   justify-content: center;
   align-items: center;
   box-shadow: 3px 3px 4px #333;
@@ -76,6 +79,7 @@ button {
 #restart-btn {
   background-color: yellowgreen;
 }
+
 /* button:focus {
   border: 1px solid black;
   box-shadow: 1.5px 3px #333;
