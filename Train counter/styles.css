@@ -10,11 +10,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   text-align: center;
-  padding: 32px;
   display: flex;
   flex-flow: column wrap;
+  justify-content: flex-start;
   min-height: 100vh;
   position: relative;
+}
+main {
+  /* max-height: 70vh; */
 }
 
 nav ul {
@@ -24,10 +27,13 @@ nav ul {
   align-items: center;
   justify-content: center;
   list-style-type: none;
+  padding: 10px;
+  margin-bottom: 30px;
+  background-color: #333;
 }
 a {
   text-decoration: none;
-  color: black;
+  color: whitesmoke;
 }
 a:hover {
   opacity: 50%;
@@ -71,7 +77,7 @@ h2 {
 button {
   border: none;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   padding-top: 10px;
   display: block;
   padding-bottom: 10px;
@@ -96,6 +102,11 @@ button {
 
 #restart-btn {
   background-color: yellowgreen;
+}
+
+footer {
+  background-color: #333;
+  color: whitesmoke;
 }
 
 /* button:focus {
