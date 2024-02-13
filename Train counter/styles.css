@@ -41,15 +41,15 @@ a:hover {
 }
 main {
   margin: 20px auto;
-  border: 2px solid grey;
+  border: 5px solid white;
   border-radius: 15px;
-  background-image: radial-gradient(whitesmoke, rgba(255, 102, 0, 0.712));
+  background-image: radial-gradient(whitesmoke, rgba(255, 102, 45, 0.712));
   display: flex;
   flex-flow: column wrap;
   flex-grow: 1;
   justify-content: center;
   align-items: center;
-  box-shadow: 3px 3px 4px #333;
+  box-shadow: -1px 3px transparent;
 }
 
 h1 {
